@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkdinListProblems
+namespace LinkedListUCs
 {
     internal class Nodes
     {
@@ -16,6 +16,7 @@ namespace LinkdinListProblems
             this.data = data;
         }
 
+       
         public class Node
         {
             public int data;
@@ -24,6 +25,8 @@ namespace LinkdinListProblems
             {
                 this.data = data;
             }
+
+            
         }
 
 

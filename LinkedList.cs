@@ -1,20 +1,22 @@
-﻿using System;
+﻿using LinkdinListProblems;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using LinkedListUCs;
 
-namespace LinkdinListProblems
+namespace LinkdinList
 {
     public class LinkedList
     {
         internal Nodes head;
-        public  void Addlast(int data)
+        public void Addlast(int data)
         {
             Nodes newNode = new Nodes(data); 
 
-            if (this.head == null)
+            if (this.head == null) 
             {
                 this.head = newNode;
 
@@ -22,8 +24,8 @@ namespace LinkdinListProblems
             else
             {
                 Nodes temp = head;
-                while (temp.next != null)
-                { 
+                while (temp.next != null) 
+                {
                     temp = temp.next;
                 }
                 temp.next = newNode;
@@ -49,34 +51,43 @@ namespace LinkdinListProblems
                 }
             }
         }
+        public void AddAtfirst(int data)
+        {
+            Nodes newNode1 = new Nodes(data);
+            newNode1 = head;
+            head = newNode1;
+            Console.WriteLine("{0} is added" + newNode1.data);
+            Console.ReadLine();
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
