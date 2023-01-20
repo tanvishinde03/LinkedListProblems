@@ -108,8 +108,23 @@ namespace LinkdinList
             temp.next = null;
             Console.WriteLine("Last Element {0} Is Removed", data);
             return this.head;
-
-
+        }
+        internal void Search(int data)
+        {
+            Nodes temp = head;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    Console.WriteLine("The node {0} is found.", temp.data);
+                    return;
+                }
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("\nThe Node {0} is not found in the linked list.", data);
+            }
 
 
         }
