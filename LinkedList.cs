@@ -59,7 +59,7 @@ namespace LinkdinList
             Console.WriteLine("{0} is inserted to the Linked List at first position ", newNode1.data);
         }
 
-        internal void InsertBetween(int previous, int data, int after) 
+        internal void InsertBetween(int previous, int data, int after)
         {
             Nodes temp = head;
             Nodes newNode = new Nodes(data);
@@ -75,11 +75,27 @@ namespace LinkdinList
                 else
                 {
                     temp = temp.next;
+
                 }
             }
         }
-    }
-}
+                internal Nodes DeleteFirstNode(int data)
+        {
+            if (this.head == null) 
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            Console.WriteLine("Element First{0} Is Removed",data);
+            return this.head;   
+        }
+
+            }
+
+
+        }
+    
+
 
 
 
