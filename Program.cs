@@ -14,7 +14,7 @@ namespace LinkdinListProblems
         {
             Console.WriteLine("Welcome to the Linked List");
             Console.WriteLine("Enter a program number given below"); 
-            Console.WriteLine("1:- Linked List\n" + "2:- Custom Linked Listed\n" + "3:- Linked List U 3\n" +"4:- Insert Node\n" + "5:- Deletion of Node\n" + "6:- Deletion in Last Node" + "7:- Searching nodes\n" + "8:- Searching and Add Nodes\n");
+            Console.WriteLine("1:- Linked List\n" + "2:- Custom Linked Listed\n" + "3:- Linked List U 3\n" +"4:- Insert Node\n" + "5:- Deletion of Node\n" + "6:- Deletion in Last Node" + "7:- Searching nodes\n" + "8:- Searching and Add Nodes\n" + "9:- Search and Delete Node\n");
             int input = Convert.ToInt32(Console.ReadLine());
 
             switch (input)
@@ -82,6 +82,18 @@ namespace LinkdinListProblems
                     num7.Addlast(70);
                     num7.SearchNodeAddNode(30, 40);
                     num7.Display();
+                    break;
+                case 9:
+                    LinkedList num8 = new LinkedList();
+                    num8.Addlast(56);
+                    num8.Addlast(30);
+                    num8.Addlast(40);
+                    num8.Addlast(70);
+                    Console.WriteLine("Before deletion:");
+                    num8.Display();
+                    Console.WriteLine("After deletion:");
+                    num8.SearchNodeDeleteNode(40);
+                    num8.Display();
                     break;
 
             }

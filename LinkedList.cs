@@ -127,24 +127,35 @@ namespace LinkdinList
             }
 
         }
-            internal void SearchNodeAddNode(int searchdata, int insertdata)
+        internal void SearchNodeAddNode(int searchdata, int insertdata)
+        {
+            Nodes temp = head;
+            Nodes newnode = new Nodes(insertdata);
+            while (temp.data != searchdata)
             {
-                Nodes temp = head;
-                Nodes newnode = new Nodes(insertdata);
-                while (temp.data != searchdata)
-                {
-                    temp = temp.next;
-                }
-                newnode.next = temp.next;
-                temp.next = newnode;
-                Console.WriteLine("{0} inserted afer the {1} node in the linked list", newnode.data, temp.data);
+                temp = temp.next;
             }
-
-
-
-
+            newnode.next = temp.next;
+            temp.next = newnode;
+            Console.WriteLine("{0} inserted afer the {1} node in the linked list", newnode.data, temp.data);
         }
     }
+        internal void SearchNodeDeleteNode(int SearchDeletedata)
+        {
+            Nodes temp = head;
+            Nodes newnode = new Nodes(SearchDeletedata);
+            while (temp.next.data != newnode.data)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+
+            Console.WriteLine("{0} deleted afer the {1} node in the linked list", SearchDeletedata, temp.data);
+        }
+
+
+    }
+    
 
 
 
