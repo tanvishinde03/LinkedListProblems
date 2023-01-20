@@ -79,27 +79,42 @@ namespace LinkdinList
                 }
             }
         }
-                internal Nodes DeleteFirstNode(int data)
+        internal Nodes DeleteFirstNode(int data)
         {
-            if (this.head == null) 
+            if (this.head == null)
             {
                 return null;
             }
             this.head = this.head.next;
-            Console.WriteLine("Element First{0} Is Removed",data);
-            return this.head;   
+            Console.WriteLine("Element First{0} Is Removed", data);
+            return this.head;
         }
 
+        internal Nodes DeleteLastNode(int data)
+        {
+            if (this.head == null)
+            {
+                return null;
             }
+            if (this.head.next == null)
+            {
+                return null;
+            }
+            Nodes temp = head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            Console.WriteLine("Last Element {0} Is Removed", data);
+            return this.head;
+
+
 
 
         }
-    
-
-
-
-
-
+    }
+}
 
 
 
