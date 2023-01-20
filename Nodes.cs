@@ -6,40 +6,30 @@ using System.Threading.Tasks;
 
 namespace LinkedListUCs
 {
-    internal class Nodes
+    public class Nodes
     {
-        internal Nodes next;
-        internal int data;
-
+        public int data;
+        public Nodes next;
         public Nodes(int data)
         {
             this.data = data;
         }
-
-       
-        public class Node
-        {
-            public int data;
-            public Node next;
-            public Node(int data)
-            {
-                this.data = data;
-            }
-
-            
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+

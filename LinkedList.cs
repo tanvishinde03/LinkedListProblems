@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using LinkedListUCs;
 
+
 namespace LinkdinList
 {
     public class LinkedList
     {
         internal Nodes head;
-        public void Addlast(int data)
+        internal void Addlast(int data)
+        
         {
             Nodes newNode = new Nodes(data); 
 
@@ -54,13 +56,16 @@ namespace LinkdinList
         public void AddAtfirst(int data)
         {
             Nodes newNode1 = new Nodes(data);
-            newNode1 = head;
+            newNode1.next = head;
             head = newNode1;
-            Console.WriteLine("{0} is added" + newNode1.data);
-            Console.ReadLine();
+            Console.WriteLine("{0} is added at first position ", newNode1.data);
         }
     }
+
+   
 }
+    
+
 
 
 
