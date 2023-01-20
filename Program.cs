@@ -41,6 +41,15 @@ namespace LinkdinListProblems
                     num2.Addlast(70);
                     num2.Display();
                     break;
+                case 4:
+                    LinkedList num3 = new LinkedList();
+                    num3.Addlast(70);
+                    num3.AddAtfirst(56);
+                    num3.Display();
+                    num3.InsertBetween(56, 30, 70);
+                    num3.Display();
+                    break;
+
             }
 
             Console.ReadLine();

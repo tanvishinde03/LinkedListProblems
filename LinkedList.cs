@@ -14,30 +14,29 @@ namespace LinkdinList
     {
         internal Nodes head;
         internal void Addlast(int data)
-        
         {
-            Nodes newNode = new Nodes(data); 
+            Nodes newNode = new Nodes(data);
 
-            if (this.head == null) 
+            if (this.head == null)
             {
                 this.head = newNode;
-
             }
             else
             {
                 Nodes temp = head;
-                while (temp.next != null) 
+                while (temp.next != null)
                 {
                     temp = temp.next;
                 }
                 temp.next = newNode;
             }
-            Console.WriteLine("{0} is inserted in to Linked list", newNode.data);
+            Console.WriteLine("{0} is inserted in to Linked list Last position", newNode.data);
         }
         public void Display()
         {
             Console.WriteLine("Display of Nodes");
             Nodes temp = this.head;
+            int pos = 1;
             if (temp == null)
             {
                 Console.WriteLine("LinkedList is Empty");
@@ -47,9 +46,8 @@ namespace LinkdinList
             {
                 while (temp != null)
                 {
-                    Console.Write("" + temp.data + " ");
+                    Console.WriteLine("position :" + pos + "Data" + temp.data + "\n");
                     temp = temp.next;
-
                 }
             }
         }
@@ -58,15 +56,30 @@ namespace LinkdinList
             Nodes newNode1 = new Nodes(data);
             newNode1.next = head;
             head = newNode1;
-            Console.WriteLine("{0} is added at first position ", newNode1.data);
+            Console.WriteLine("{0} is inserted to the Linked List at first position ", newNode1.data);
+        }
+
+        internal void InsertBetween(int previous, int data, int after) 
+        {
+            Nodes temp = head;
+            Nodes newNode = new Nodes(data);
+            Nodes store;
+            while (temp != null)
+            {
+                if (temp.data == previous && temp.next.data == after)
+                {
+                    store = temp.next;
+                    temp.next.next = newNode;
+                    newNode = store;
+                }
+                else
+                {
+                    temp = temp.next;
+                }
+            }
         }
     }
-
-   
 }
-    
-
-
 
 
 
